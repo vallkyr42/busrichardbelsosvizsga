@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JavaScript Unit teszt feladat</title>
+	<script type="text/javascript">
+		// <!-- Ide jön  a feladat megoldása... -->
+
+		var szamok = [10, 20, 3, 5, 100, 50, 60, 53];
+		function kivalogatParosOtven([]) {
+			var parosotvenesek = [];
+			for (let i = 0; i < szamok.length; i++) {
+				if (szamok[i] > 50 && (szamok[i] % 2 == 0)) {
+					parosotvenesek.push(szamok[i])
+				}
+
+			}
+			console.log(parosotvenesek);
+			return parosotvenesek;
+		}
+
+		function aBetukSzamaDiv() {
+			var db = 0;
+			var element = document.getElementsByTagName("div")[0];
+			var szoveg = element.innerText;
+			console.log(szoveg);
+
+			for (i = 0; i < szoveg.length; i++) {
+				if (szoveg[i] == "a") {
+					db++;
+				}
+			}
+			return db;
+		}
+
+		var n1 = Number("");
+		var n2 = Number("");
+		var classnev = " ";
+
+		function osszeadasFeliras(classnev, n1, n2) {
+
+			n1 = Number(n1);
+			n2 = Number(n2);
+			var elsodiv = document.getElementsByTagName("div")[0];
+			var classresz = document.createElement("div");
+			classresz.setAttribute("class", classnev)
+			var p = document.createElement("p");
+			var beirando = document.createTextNode(n1 + "+" + n2 + "=" + (n1 + n2));
+			p.appendChild(beirando);
+			classresz.appendChild(p);
+			elsodiv.appendChild(classresz);
+
+		}
+
+
+		//	<!-- Idáig -->
+	</script>
+	<script src="testBaseUnit.js"></script>
+</head>
+
+<body>
+	<div></div>
+	<hr>
+	<div id="testResult">
+		<h2>Tesztek</h2>
+	</div>
+</body>
+
+</html>
